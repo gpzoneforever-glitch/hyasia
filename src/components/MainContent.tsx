@@ -23,8 +23,8 @@ const MainContent = () => {
             <div className="flex items-center gap-3 mb-8">
               <button
                 onClick={() => setShowRules(!showRules)}
-                className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors green-glow"
-              >
+                className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors green-glow">
+
                 <ScrollText className="h-4 w-4" />
                 Community Rules
               </button>
@@ -41,12 +41,12 @@ const MainContent = () => {
         </div>
       </div>
 
-      {showRules && (
-        <div className="rounded-xl border border-border bg-card p-6 relative">
+      {showRules &&
+      <div className="rounded-xl border border-border bg-card p-6 relative">
           <button
-            onClick={() => setShowRules(false)}
-            className="absolute top-4 right-4 rounded-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
+          onClick={() => setShowRules(false)}
+          className="absolute top-4 right-4 rounded-sm text-muted-foreground hover:text-foreground transition-colors">
+
             <X className="h-5 w-5" />
           </button>
           <div className="flex items-start gap-6">
@@ -60,13 +60,13 @@ const MainContent = () => {
               </ul>
             </div>
             <div className="flex-shrink-0 hidden sm:block">
-              <img src={rulesCharacter} alt="Rules character" className="w-40 h-40 object-contain" />
+              <img alt="Rules character" className="w-40 h-40 object-contain" src="/lovable-uploads/16e71af9-9ceb-41e9-a87d-bd7bce25c81c.png" />
             </div>
           </div>
         </div>
-      )}
-    </div>
-  );
+      }
+    </div>);
+
 };
 
 export default MainContent;
