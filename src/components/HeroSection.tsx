@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Copy, Check, Mouse } from "lucide-react";
+import { Copy, Check } from "lucide-react";
 import heroBg from "@/assets/hero-bg.gif";
 import logo from "@/assets/hyasia.png";
 
@@ -46,10 +46,6 @@ const HeroSection = () => {
           {copied ? <Check className="h-4 w-4 text-primary" /> : <Copy className="h-4 w-4" />}
           {copied ? "Copied!" : "play.hyterra.com"}
         </button>
-
-        <div className="mt-8 animate-bounce">
-          <Mouse className="h-6 w-6 text-muted-foreground" />
-        </div>
       </div>
     </section>);
 
