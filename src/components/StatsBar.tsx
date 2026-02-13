@@ -2,7 +2,7 @@ import { Users, MessageCircle, Signal } from "lucide-react";
 import banner from "@/assets/banner.gif";
 
 const stats = [
-  { icon: Users, value: "-", label: "ONLINE" },
+  { icon: Users, value: "-", label: "ÇEVRİMİÇİ" },
   { icon: MessageCircle, value: "966", label: "DISCORD" },
   { icon: Signal, value: "✓", label: "SERVER STATUS", color: "text-primary" },
 ];
