@@ -1,4 +1,5 @@
-import { Copy, Play } from "lucide-react";
+import { useState } from "react";
+import { Copy, Check } from "lucide-react";
 import heroBg from "@/assets/hero-bg.gif";
 import logo from "@/assets/hyasia.png";
 
@@ -9,6 +10,14 @@ const DiscordIcon = () =>
 
 
 const HeroSection = () => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("play.hyterra.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <section className="relative flex flex-col items-center justify-center overflow-hidden py-44">
       <img
@@ -21,20 +30,21 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-background/40" />
 
       <div className="relative z-10 flex flex-col items-center text-center px-4">
-        {/* Logo centered */}
         <img alt="HyAsia Logo" className="w-[28rem] h-auto drop-shadow-2xl mb-6" src="/lovable-uploads/c8e3b353-a6a1-4689-83d2-abbb29a18db9.png" />
-
 
         <h1 className="font-display text-6xl font-bold tracking-tight text-foreground text-glow mb-4">
           HYASIA
         </h1>
         <p className="max-w-lg text-muted-foreground mb-8">
           Optimized for low-latency gameplay across Asia. Say goodbye to lag and hello to fluid combat!
-
         </p>
-        <button className="flex items-center gap-3 rounded-xl border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground hover:bg-secondary transition-colors">
-          <Copy className="h-4 w-4" />
-          play.hyterra.com
+        <button
+          onClick={handleCopy}
+          className="group flex items-center gap-3 rounded-xl border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-all duration-200 hover:bg-secondary hover:shadow-[0_8px_24px_hsl(142_70%_45%/0.25)] hover:-translate-y-1 hover:scale-105 active:translate-y-0 active:scale-95"
+          style={{ perspective: "600px" }}
+        >
+          {copied ? <Check className="h-4 w-4 text-primary" /> : <Copy className="h-4 w-4" />}
+          {copied ? "Copied!" : "play.hyterra.com"}
         </button>
       </div>
     </section>);
