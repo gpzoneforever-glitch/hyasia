@@ -1,9 +1,10 @@
 import { Copy } from "lucide-react";
 import heroBg from "@/assets/hero-bg.gif";
+import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center overflow-hidden py-32">
+    <section className="relative flex flex-col items-center justify-center overflow-hidden py-44">
       <img
         src={heroBg}
         alt=""
@@ -14,8 +15,9 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-background/40" />
 
       <div className="relative z-10 flex flex-col items-center text-center px-4">
+        <img src={logo} alt="HyAsia Logo" className="w-32 h-32 mb-4 drop-shadow-2xl" />
         <h1 className="font-display text-6xl font-bold tracking-tight text-foreground text-glow mb-4">
-          HYTERRA
+          HYASIA
         </h1>
         <p className="max-w-lg text-muted-foreground mb-8">
           En iyi oyun deneyimine katılın. İmparatorluğunuzu kurun, diğerleriyle savaşın
