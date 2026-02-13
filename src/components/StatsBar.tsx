@@ -15,7 +15,7 @@ const StatsBar = () => {
           {stats.map((stat) =>
           <div key={stat.label} className="flex flex-col items-center gap-1 bg-card py-5">
               <stat.icon className={`h-5 w-5 ${stat.color || "text-muted-foreground"}`} />
-              <span className="text-2xl font-bold text-foreground">{stat.value}</span>
+              
               <span className="text-xs font-medium tracking-wider text-muted-foreground">{stat.label}</span>
             </div>
           )}
