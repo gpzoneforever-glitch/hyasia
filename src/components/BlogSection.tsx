@@ -16,24 +16,24 @@ const BlogSection = () => {
           <Image className="h-8 w-8 text-primary" />
           <div>
             <h3 className="font-display text-xl font-bold text-foreground">Gallery</h3>
-            <p className="text-xs text-muted-foreground">Anasayfa › Galeri</p>
+            <p className="text-xs text-muted-foreground">We’re all about good vibes and great community. Whether you’re here to learn, share, or just chill, you’re officially part of the family now. We can't wait to get to know you!</p>
           </div>
         </div>
         <img src={galleryMascot} alt="" className="h-20 w-20 object-contain" />
       </div>
 
       <div className="grid grid-cols-2 gap-2">
-        {images.map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt=""
-            className={`w-full rounded-lg object-cover ${i === 0 ? "col-span-2 h-56" : "h-40"}`}
-          />
-        ))}
+        {images.map((src, i) =>
+        <img
+          key={i}
+          src={src}
+          alt=""
+          className={`w-full rounded-lg object-cover ${i === 0 ? "col-span-2 h-56" : "h-40"}`} />
+
+        )}
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 export default BlogSection;
