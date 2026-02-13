@@ -4,9 +4,8 @@ import StatsBar from "@/components/StatsBar";
 import MainContent from "@/components/MainContent";
 import DiscordWidget from "@/components/DiscordWidget";
 import BlogSection from "@/components/BlogSection";
-import Sidebar from "@/components/Sidebar";
-import Footer from "@/components/Footer";
 import CommunityChatCard from "@/components/CommunityChatCard";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -26,7 +25,6 @@ const Index = () => {
           {/* Right column */}
           <div className="space-y-6">
             <DiscordWidget />
-            <Sidebar />
           </div>
         </div>
       </main>
