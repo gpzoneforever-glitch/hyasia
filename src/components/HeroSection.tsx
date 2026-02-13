@@ -22,7 +22,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 flex flex-col items-center text-center px-4">
         {/* Logo centered */}
-        <img src={logo} alt="HyAsia Logo" className="w-[28rem] h-auto drop-shadow-2xl mb-6" />
+        <img alt="HyAsia Logo" className="w-[28rem] h-auto drop-shadow-2xl mb-6" src="/lovable-uploads/c8e3b353-a6a1-4689-83d2-abbb29a18db9.png" />
 
 
         <h1 className="font-display text-6xl font-bold tracking-tight text-foreground text-glow mb-4">
