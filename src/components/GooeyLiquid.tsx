@@ -47,12 +47,13 @@ const GooeyLiquid = () => {
         ].map((bubble, i) => (
           <div
             key={i}
-            className="absolute rounded-full bg-primary/30"
+            className="absolute rounded-full bg-primary/40"
             style={{
               left: bubble.left,
               bottom: '0px',
               width: bubble.size,
               height: bubble.size,
+              boxShadow: `0 0 ${bubble.size * 2}px hsl(var(--primary) / 0.6), 0 0 ${bubble.size * 4}px hsl(var(--primary) / 0.3)`,
               animation: `bubbleRise ${bubble.dur}s ease-in infinite ${bubble.delay}s`,
             }}
           />
