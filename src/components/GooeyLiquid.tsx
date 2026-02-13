@@ -18,17 +18,17 @@ const GooeyLiquid = () => {
 
       <div className="absolute inset-0" style={{ filter: 'url(#gooey)' }}>
         {/* Base wave */}
-        <svg
-          viewBox="0 0 1440 180"
-          className="absolute bottom-0 w-full"
-          preserveAspectRatio="none"
-          style={{ height: '100%' }}>
+        
 
-          <path
-            d="M0,180 L0,120 Q60,60 120,100 Q180,140 240,90 Q320,30 400,80 Q460,120 520,70 Q600,10 680,60 Q740,100 800,50 Q880,0 960,70 Q1020,110 1080,60 Q1160,10 1240,80 Q1320,130 1380,90 Q1420,70 1440,80 L1440,180 Z"
-            fill="hsl(var(--primary))" />
 
-        </svg>
+
+
+
+
+
+
+
+
 
         {/* Dripping blobs */}
         {[
