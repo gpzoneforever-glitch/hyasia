@@ -60,7 +60,7 @@ const MainContent = () => {
               </ul>
             </div>
             <div className="flex-shrink-0 hidden sm:block">
-              <img alt="Rules character" className="w-40 h-40 object-contain" src="/lovable-uploads/16e71af9-9ceb-41e9-a87d-bd7bce25c81c.png" />
+              <img alt="Rules character" className="w-52 h-52 object-contain -mb-6 -mr-2" src="/lovable-uploads/16e71af9-9ceb-41e9-a87d-bd7bce25c81c.png" />
             </div>
           </div>
         </div>
