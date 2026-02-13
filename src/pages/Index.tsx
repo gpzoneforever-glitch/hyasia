@@ -25,6 +25,16 @@ const Index = () => {
           {/* Right column */}
           <div className="space-y-6">
             <DiscordWidget />
+            <div className="rounded-xl border border-border bg-card overflow-hidden">
+              <iframe
+                src="https://e.widgetbot.io/channels/1450896701106688165/1460981707413913781"
+                width="100%"
+                height="600"
+                allow="clipboard-write; fullscreen"
+                className="w-full"
+                title="Community Chat"
+              />
+            </div>
           </div>
         </div>
       </main>
