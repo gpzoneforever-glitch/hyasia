@@ -21,8 +21,46 @@ const GooeyLiquid = () => {
         </defs>
       </svg>
 
+      {/* Rising bubble particles */}
+      <div className="absolute inset-0 pointer-events-none">
+        {[
+          { left: '5%', size: 6, dur: 3, delay: 0 },
+          { left: '10%', size: 4, dur: 3.5, delay: 0.5 },
+          { left: '15%', size: 8, dur: 4, delay: 1.2 },
+          { left: '22%', size: 3, dur: 2.8, delay: 0.3 },
+          { left: '28%', size: 5, dur: 3.2, delay: 1.8 },
+          { left: '35%', size: 7, dur: 3.8, delay: 0.7 },
+          { left: '40%', size: 4, dur: 2.5, delay: 2.1 },
+          { left: '48%', size: 6, dur: 3.6, delay: 0.9 },
+          { left: '52%', size: 3, dur: 2.9, delay: 1.5 },
+          { left: '58%', size: 8, dur: 4.2, delay: 0.2 },
+          { left: '63%', size: 5, dur: 3.1, delay: 1.1 },
+          { left: '70%', size: 4, dur: 2.7, delay: 2.3 },
+          { left: '75%', size: 7, dur: 3.9, delay: 0.6 },
+          { left: '80%', size: 3, dur: 3.3, delay: 1.7 },
+          { left: '85%', size: 6, dur: 2.6, delay: 0.4 },
+          { left: '90%', size: 5, dur: 3.7, delay: 1.3 },
+          { left: '95%', size: 4, dur: 3.0, delay: 2.0 },
+          { left: '18%', size: 3, dur: 2.4, delay: 0.8 },
+          { left: '45%', size: 5, dur: 3.4, delay: 1.6 },
+          { left: '67%', size: 4, dur: 2.8, delay: 2.5 },
+        ].map((bubble, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full bg-primary/30"
+            style={{
+              left: bubble.left,
+              bottom: '0px',
+              width: bubble.size,
+              height: bubble.size,
+              animation: `bubbleRise ${bubble.dur}s ease-in infinite ${bubble.delay}s`,
+            }}
+          />
+        ))}
+      </div>
+
       <div className="absolute inset-0" style={{ filter: 'url(#gooey)' }}>
-        {/* Base wave - attached to bottom */}
+        {/* Base wave */}
         <svg
           viewBox="0 0 1440 220"
           className="absolute bottom-0 w-full h-full"
@@ -34,7 +72,7 @@ const GooeyLiquid = () => {
           />
         </svg>
 
-        {/* Large dramatic dripping blobs */}
+        {/* Dripping blobs */}
         {[
           { cx: 80, cy: 100, r: 30 },
           { cx: 200, cy: 70, r: 22 },
@@ -47,7 +85,6 @@ const GooeyLiquid = () => {
           { cx: 1080, cy: 100, r: 30 },
           { cx: 1200, cy: 65, r: 24 },
           { cx: 1350, cy: 95, r: 28 },
-          // Small floating bubbles
           { cx: 150, cy: 45, r: 10 },
           { cx: 380, cy: 35, r: 7 },
           { cx: 620, cy: 30, r: 9 },
@@ -88,6 +125,23 @@ const GooeyLiquid = () => {
           </svg>
         ))}
       </div>
+
+      {/* Inline keyframes for bubble animation */}
+      <style>{`
+        @keyframes bubbleRise {
+          0% {
+            transform: translateY(0) scale(1);
+            opacity: 0.7;
+          }
+          50% {
+            opacity: 0.5;
+          }
+          100% {
+            transform: translateY(-200px) scale(0.3);
+            opacity: 0;
+          }
+        }
+      `}</style>
     </div>
   );
 };
