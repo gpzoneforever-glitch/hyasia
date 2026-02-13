@@ -82,14 +82,13 @@ const RecentPurchases = () =>
 
 
 const Sidebar = () => {
-  return;
-
-
-
-
-
-
-
+  return (
+    <div className="space-y-6">
+      <MonthlyDonors />
+      <RecentDonations />
+      <RecentPurchases />
+    </div>
+  );
 };
 
 export default Sidebar;

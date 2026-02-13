@@ -6,6 +6,7 @@ import DiscordWidget from "@/components/DiscordWidget";
 import BlogSection from "@/components/BlogSection";
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
+import CommunityChatCard from "@/components/CommunityChatCard";
 
 const Index = () => {
   return (
@@ -30,6 +31,7 @@ const Index = () => {
         </div>
       </main>
 
+      <CommunityChatCard />
       <Footer />
     </div>
   );
