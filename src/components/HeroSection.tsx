@@ -1,14 +1,17 @@
 import { Copy } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.gif";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center overflow-hidden py-20">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
+    <section className="relative flex flex-col items-center justify-center overflow-hidden py-32">
+      <img
+        src={heroBg}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/40 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-background/40" />
 
       <div className="relative z-10 flex flex-col items-center text-center px-4">
         <h1 className="font-display text-6xl font-bold tracking-tight text-foreground text-glow mb-4">
