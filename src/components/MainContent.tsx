@@ -1,5 +1,6 @@
 import { Gamepad2, ShoppingBag } from "lucide-react";
 import characterImg from "@/assets/character.png";
+import kweebecGif from "@/assets/kweebec.gif";
 
 const MainContent = () => {
   return (
@@ -43,12 +44,9 @@ const MainContent = () => {
           </div>
         </div>
         
-
-
-
-
-
-
+        <div className="flex items-center justify-center flex-shrink-0">
+          <img src={kweebecGif} alt="Kweebec character" className="w-64 h-64 object-contain drop-shadow-[0_0_15px_hsl(var(--primary)/0.4)]" />
+        </div>
       </div>
     </div>);
 
