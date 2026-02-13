@@ -9,7 +9,7 @@ const MainContent = () => {
         <div className="flex-1">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary mb-4">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse-glow" />
-            ŞİMDİ AKTİF
+            ONLINE
           </span>
           <h2 className="font-display text-3xl font-bold text-foreground mb-1">WELCOME TO </h2>
           <h2 className="font-display text-3xl font-bold text-primary text-glow mb-4">​HYASIA TOP HYTALE SERVER PH              </h2>
