@@ -33,13 +33,14 @@ const GooeyLiquid = () => {
       </svg>
 
       <div className="absolute inset-0" style={{ filter: 'url(#gooey)' }}>
-        {blobs.map((blob, i) => {}
-
-
-
-
-
-        )}
+        <svg className="w-full h-full" viewBox="0 0 1440 180" preserveAspectRatio="none">
+          <rect y="120" width="1440" height="60" fill="hsl(var(--primary))" />
+          {blobs.map((blob, i) => (
+            <circle key={i} cx={blob.cx} cy={blob.cy} r={blob.r} fill="hsl(var(--primary))">
+              <animate attributeName="cy" values={`${blob.cy};${blob.cy + 30};${blob.cy}`} dur={`${2 + i * 0.3}s`} repeatCount="indefinite" />
+            </circle>
+          ))}
+        </svg>
       </div>
     </div>);
 
