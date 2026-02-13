@@ -82,13 +82,13 @@ const RecentPurchases = () =>
 
 
 const Sidebar = () => {
-  return (
-    <div className="space-y-4">
-      <TopDonors />
-      <MonthlyDonors />
-      <RecentDonations />
-      <RecentPurchases />
-    </div>);
+  return;
+
+
+
+
+
+
 
 };
 
