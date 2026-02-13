@@ -1,6 +1,6 @@
 import { Copy, Play } from "lucide-react";
 import heroBg from "@/assets/hero-bg.gif";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/hyasia.png";
 
 const DiscordIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="h-9 w-9 text-primary">
@@ -21,6 +21,9 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-background/40" />
 
       <div className="relative z-10 flex flex-col items-center text-center px-4">
+        {/* Logo centered */}
+        <img src={logo} alt="HyAsia Logo" className="w-80 h-auto drop-shadow-2xl mb-6" />
+
         <div className="flex items-center gap-6 mb-4">
           {/* Players Online Card */}
           <div className="flex items-center gap-3 px-5 py-3">
@@ -30,9 +33,6 @@ const HeroSection = () => {
             </div>
             <Play className="h-10 w-10 text-primary fill-primary" />
           </div>
-
-          {/* Logo */}
-          <img src={logo} alt="HyAsia Logo" className="w-40 h-40 drop-shadow-2xl" />
 
           {/* Users Online Card */}
           <div className="flex items-center gap-3 px-5 py-3">
