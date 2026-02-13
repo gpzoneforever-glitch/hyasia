@@ -24,25 +24,6 @@ const HeroSection = () => {
         {/* Logo centered */}
         <img src={logo} alt="HyAsia Logo" className="w-80 h-auto drop-shadow-2xl mb-6" />
 
-        <div className="flex items-center gap-6 mb-4">
-          {/* Players Online Card */}
-          <div className="flex items-center gap-3 px-5 py-3">
-            <div className="text-right">
-              <p className="text-lg font-bold text-primary">23968 PLAYERS ONLINE</p>
-              <p className="text-xs font-semibold text-muted-foreground tracking-wider">MC.HYASIA.NET</p>
-            </div>
-            <Play className="h-10 w-10 text-primary fill-primary" />
-          </div>
-
-          {/* Users Online Card */}
-          <div className="flex items-center gap-3 px-5 py-3">
-            <DiscordIcon />
-            <div className="text-left">
-              <p className="text-lg font-bold text-primary">391 USERS ONLINE</p>
-              <p className="text-xs font-semibold text-muted-foreground tracking-wider">DISCORD.GG/HYASIA</p>
-            </div>
-          </div>
-        </div>
 
         <h1 className="font-display text-6xl font-bold tracking-tight text-foreground text-glow mb-4">
           HYASIA
