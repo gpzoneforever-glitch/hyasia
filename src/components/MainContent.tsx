@@ -11,7 +11,7 @@ const MainContent = () => {
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse-glow" />
             ŞİMDİ AKTİF
           </span>
-          <h2 className="font-display text-3xl font-bold text-foreground mb-1">Kendi</h2>
+          <h2 className="font-display text-3xl font-bold text-foreground mb-1">WELCOME TO </h2>
           <h2 className="font-display text-3xl font-bold text-primary text-glow mb-4">​HYASIA TOP HYTALE SERVER PH              </h2>
           <p className="text-sm text-muted-foreground mb-6 max-w-sm">
             We’ve blended high-performance hosting with unique gameplay features to ensure your Hytale experience is second to none.
