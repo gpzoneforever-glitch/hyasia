@@ -1,5 +1,6 @@
 import { Gamepad2, ShoppingBag } from "lucide-react";
 import characterImg from "@/assets/character.png";
+import kweebecGif from "@/assets/kweebec.gif";
 
 const MainContent = () => {
   return (
@@ -28,10 +29,10 @@ const MainContent = () => {
             </button>
           </div>
           <div className="flex items-center gap-8">
-            
-
-
-
+            <div>
+              <span className="text-2xl font-bold text-foreground">100+</span>
+              <p className="text-xs text-muted-foreground">ÇEVRİMİÇİ</p>
+            </div>
             <div>
               <span className="text-2xl font-bold text-foreground">50K+</span>
               <p className="text-xs text-muted-foreground">KAYITLI</p>
@@ -42,12 +43,9 @@ const MainContent = () => {
             </div>
           </div>
         </div>
-        <div className="hidden md:flex flex-col items-center">
-          <img src={characterImg} alt="Character" className="h-48 w-48 object-contain" />
-          <div className="mt-2 rounded-lg bg-secondary px-3 py-1.5 text-center">
-            <p className="text-xs text-muted-foreground">En İyi Rütbe</p>
-            <p className="text-sm font-bold text-gold">MVP+</p>
-          </div>
+        
+        <div className="flex items-center justify-center flex-shrink-0">
+          <img src={kweebecGif} alt="Kweebec character" className="w-64 h-64 object-contain drop-shadow-[0_0_15px_hsl(var(--primary)/0.4)]" />
         </div>
       </div>
     </div>);
