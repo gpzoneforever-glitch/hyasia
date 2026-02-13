@@ -6,6 +6,7 @@ import DiscordWidget from "@/components/DiscordWidget";
 import BlogSection from "@/components/BlogSection";
 import CommunityChatCard from "@/components/CommunityChatCard";
 import Footer from "@/components/Footer";
+import GooeyLiquid from "@/components/GooeyLiquid";
 
 const Index = () => {
   return (
@@ -40,6 +41,7 @@ const Index = () => {
       </main>
 
       <CommunityChatCard />
+      <GooeyLiquid />
       <Footer />
     </div>
   );
