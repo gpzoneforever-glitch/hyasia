@@ -42,16 +42,16 @@ const MainContent = () => {
             </div>
           </div>
         </div>
-        <div className="hidden md:flex flex-col items-center">
-          <img src={characterImg} alt="Character" className="h-48 w-48 object-contain" />
-          <div className="mt-2 rounded-lg bg-secondary px-3 py-1.5 text-center">
-            <p className="text-xs text-muted-foreground">En İyi Rütbe</p>
-            <p className="text-sm font-bold text-gold">MVP+</p>
-          </div>
-        </div>
+        
+
+
+
+
+
+
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 export default MainContent;
