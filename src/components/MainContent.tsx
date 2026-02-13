@@ -14,9 +14,9 @@ const MainContent = () => {
           <h2 className="font-display text-3xl font-bold text-foreground mb-1">Kendi</h2>
           <h2 className="font-display text-3xl font-bold text-primary text-glow mb-4">Destanını Yaz</h2>
           <p className="text-sm text-muted-foreground mb-6 max-w-sm">
-            Binlerce oyuncuya katılın ve sonsuz olasılıklarla dolu bir
-            dünyada yerinizi alın. Birlikte inşa edin, savaşın ve
-            keşfedin.
+            We’ve blended high-performance hosting with unique gameplay features to ensure your Hytale experience is second to none.
+          
+
           </p>
           <div className="flex items-center gap-3 mb-8">
             <button className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors green-glow">
