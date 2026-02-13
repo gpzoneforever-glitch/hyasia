@@ -28,20 +28,6 @@ const MainContent = () => {
               Mağaza
             </button>
           </div>
-          <div className="flex items-center gap-8">
-            <div>
-              <span className="text-2xl font-bold text-foreground">100+</span>
-              <p className="text-xs text-muted-foreground">ÇEVRİMİÇİ</p>
-            </div>
-            <div>
-              <span className="text-2xl font-bold text-foreground">50K+</span>
-              <p className="text-xs text-muted-foreground">KAYITLI</p>
-            </div>
-            <div>
-              <span className="text-2xl font-bold text-foreground">24/7</span>
-              <p className="text-xs text-muted-foreground">AKTİFLİK</p>
-            </div>
-          </div>
         </div>
         
         <div className="flex items-center justify-center flex-shrink-0">
