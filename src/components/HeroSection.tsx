@@ -13,7 +13,7 @@ const HeroSection = () => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("play.hyterra.com");
+    navigator.clipboard.writeText("PLAY.HYASIA.NET");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -44,7 +44,7 @@ const HeroSection = () => {
           style={{ perspective: "600px" }}
         >
           {copied ? <Check className="h-4 w-4 text-primary" /> : <Copy className="h-4 w-4" />}
-          {copied ? "Copied!" : "play.hyterra.com"}
+          {copied ? "Copied!" : "PLAY.HYASIA.NET"}
         </button>
       </div>
     </section>);
