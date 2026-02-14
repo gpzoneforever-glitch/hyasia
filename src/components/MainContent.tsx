@@ -4,6 +4,7 @@ import kweebecGif from "@/assets/kweebec.gif";
 import staffIwanderinglich from "@/assets/staff-iwanderinglich.png";
 import staffTinidor from "@/assets/staff-tinidor.png";
 import staffYuki from "@/assets/staff-yuki.png";
+import staffDailyformality from "@/assets/staff-dailyformality.png";
 
 const MainContent = () => {
   const [showRules, setShowRules] = useState(false);
@@ -13,6 +14,7 @@ const MainContent = () => {
     { name: "tinidor", role: "owner", image: staffTinidor },
     { name: "iWanderingLich", role: "staff", image: staffIwanderinglich },
     { name: "yuki", role: "developer", image: staffYuki },
+    { name: "dailyformality", role: "staff", image: staffDailyformality },
   ];
 
   return (
@@ -97,7 +99,7 @@ const MainContent = () => {
             <X className="h-5 w-5" />
           </button>
           <h3 className="font-display text-2xl font-bold text-foreground mb-6">STAFF TEAM</h3>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-4 gap-6">
             {staffMembers.map((member) => (
               <div key={member.name} className="flex flex-col items-center text-center">
                 <img src={member.image} alt={member.name} className="w-32 h-32 object-contain mb-3 drop-shadow-[0_0_10px_hsl(var(--primary)/0.3)]" />
