@@ -28,12 +28,12 @@ const StatsBar = () => {
     <div className="container mx-auto px-4 -mt-6 relative z-20">
       <div className="rounded-xl overflow-hidden border border-border">
         <div className="grid grid-cols-2 gap-px bg-border">
-          {stats.map((stat) => (
-            <div key={stat.label} className="bg-card flex items-center justify-center gap-2 py-3">
-              <LiveSignal />
-              <span className="text-xs font-semibold tracking-wider text-foreground">{stat.label}</span>
-            </div>
-          ))}
+          {stats.map((stat) => {}
+
+
+
+
+          )}
         </div>
         <img alt="Banner" className="w-full h-auto block" src="/lovable-uploads/ca3a35e1-170b-4e41-981f-51e4d5dd3e5e.png" />
       </div>
