@@ -1,72 +1,21 @@
-import { Home, ShoppingBag, MessageSquare, HelpCircle, Headphones } from "lucide-react";
+import { Rocket } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border bg-card mt-12">
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div className="border-t border-border py-4">
-        <div className="container mx-auto flex items-center justify-between px-4">
-          <p className="text-[10px] text-muted-foreground">Tüm hakları saklıdır. © 2026</p>
-          <div className="flex items-center gap-2">
-            <span className="rounded-md bg-secondary px-3 py-1 text-[10px] text-muted-foreground">Powered by LoaderOS</span>
-            <span className="rounded-md bg-secondary px-3 py-1 text-[10px] text-muted-foreground">Designed by Gamalize</span>
-          </div>
+    <footer className="mt-12 border-t border-border bg-gradient-to-t from-[hsl(270_60%_8%)] via-[hsl(260_40%_10%)] to-background">
+      <div className="container mx-auto flex items-center justify-between px-4 py-4">
+        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+          <Rocket className="h-4 w-4 text-primary" />
+          <span>Hyasia Network © 2026</span>
         </div>
+        <nav className="flex items-center gap-6">
+          <a href="#" className="text-xs font-semibold uppercase tracking-wider text-foreground hover:text-primary transition-colors">Home</a>
+          <a href="https://store.hyasia.net" target="_blank" rel="noopener noreferrer" className="text-xs font-semibold uppercase tracking-wider text-foreground hover:text-primary transition-colors">Store</a>
+          <a href="https://discord.gg/hyasia" target="_blank" rel="noopener noreferrer" className="text-xs font-semibold uppercase tracking-wider text-foreground hover:text-primary transition-colors">Discord</a>
+        </nav>
       </div>
-    </footer>);
-
+    </footer>
+  );
 };
 
 export default Footer;
