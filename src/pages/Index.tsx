@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import StatsBar from "@/components/StatsBar";
@@ -7,11 +8,15 @@ import BlogSection from "@/components/BlogSection";
 import CommunityChatCard from "@/components/CommunityChatCard";
 import Footer from "@/components/Footer";
 import FairyDust from "@/components/FairyDust";
+import SplashScreen from "@/components/SplashScreen";
 
 
 const Index = () => {
+  const [entered, setEntered] = useState(false);
+
   return (
     <div className="min-h-screen bg-background">
+      {!entered && <SplashScreen onEnter={() => setEntered(true)} />}
       <FairyDust />
       <Navbar />
       <HeroSection />
