@@ -24,9 +24,12 @@ const SplashScreen = ({ onEnter }: { onEnter: () => void }) => {
   const startLoading = useCallback(() => {
     // Start music
     if (!audioRef.current) {
-      audioRef.current = new Audio("/bg-music.mp3");
-      audioRef.current.loop = true;
-      audioRef.current.volume = 0.4;
+      const audio = new Audio("/bg-music.mp3");
+      audio.loop = true;
+      audio.volume = 0.4;
+      audio.setAttribute("data-bg-music", "true");
+      document.body.appendChild(audio);
+      audioRef.current = audio;
     }
     audioRef.current.play().catch(() => {});
 
