@@ -2,7 +2,7 @@ import hyasiaIcon from "@/assets/hyasia-icon.webp";
 
 const Footer = () => {
   return (
-    <footer className="mt-12 border-t border-border bg-gradient-to-t from-[hsl(270_60%_8%)] via-[hsl(260_40%_10%)] to-background">
+    <footer className="mt-12 border-t border-border bg-gradient-to-t from-[hsl(142_30%_6%)] via-[hsl(142_20%_8%)] to-background">
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <img src={hyasiaIcon} alt="Hyasia" className="h-6 w-6" />
