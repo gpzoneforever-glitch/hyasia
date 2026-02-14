@@ -58,11 +58,11 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    cursor: url('/cursors/sword.svg') 3 3, default;
+    cursor: url('/cursors/sword.png') 4 4, default;
   }
 
   a, button, [role="button"], input, select, textarea, label, summary, [tabindex]:not([tabindex="-1"]) {
-    cursor: url('/cursors/sword-pointer.svg') 3 3, pointer;
+    cursor: url('/cursors/sword.png') 4 4, pointer;
   }
 }
 
