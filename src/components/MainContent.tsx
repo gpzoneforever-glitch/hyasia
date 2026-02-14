@@ -54,7 +54,7 @@ const MainContent = () => {
                 className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-5 py-2.5 text-sm font-semibold text-foreground transition-all duration-200 hover:bg-muted hover:shadow-[0_8px_24px_hsl(0_0%_0%/0.4)] hover:-translate-y-1 hover:scale-105 active:translate-y-0 active:scale-95"
                 style={{ perspective: "600px" }}>
                 <Users className="h-4 w-4" />
-                Staff Team
+                Staff
               </button>
             </div>
           </div>
