@@ -19,7 +19,6 @@ const LiveSignal = () => {
 };
 
 const stats = [
-{ label: "SERVER", live: true },
 { label: "WEBSITE", live: true },
 { label: "DISCORD", live: true }];
 
@@ -28,7 +27,7 @@ const StatsBar = () => {
   return (
     <div className="container mx-auto px-4 -mt-6 relative z-20">
       <div className="rounded-xl overflow-hidden border border-border">
-        <div className="grid grid-cols-3 gap-px bg-border">
+        <div className="grid grid-cols-2 gap-px bg-border">
           {stats.map((stat) => (
             <div key={stat.label} className="bg-card flex items-center justify-center gap-2 py-3">
               <LiveSignal />
