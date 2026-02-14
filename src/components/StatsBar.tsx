@@ -1,39 +1,27 @@
 import { useState, useEffect } from "react";
 import { Signal } from "lucide-react";
 
-const PingIndicator = () => {
-  const [pingLevel, setPingLevel] = useState(4); // 1-4 bars
+const LiveSignal = () => {
+  const [level, setLevel] = useState<"good" | "mid" | "bad">("good");
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setPingLevel(Math.floor(Math.random() * 4) + 1);
-    }, 2000 + Math.random() * 3000);
+    const update = () => {
+      const rand = Math.random();
+      setLevel(rand > 0.4 ? "good" : rand > 0.15 ? "mid" : "bad");
+    };
+    const interval = setInterval(update, 2000 + Math.random() * 3000);
     return () => clearInterval(interval);
   }, []);
 
-  // green for good (3-4), orange for mid (2), red for bad (1)
-  const color = pingLevel >= 3 ? "hsl(var(--primary))" : pingLevel === 2 ? "#f59e0b" : "#ef4444";
+  const color = level === "good" ? "text-primary" : level === "mid" ? "text-amber-500" : "text-red-500";
 
-  return (
-    <div className="flex items-end gap-[2px] h-5">
-      {[1, 2, 3, 4].map((bar) => (
-        <div
-          key={bar}
-          className="w-[3px] rounded-sm transition-all duration-500"
-          style={{
-            height: `${bar * 4 + 4}px`,
-            backgroundColor: bar <= pingLevel ? color : "hsl(var(--muted-foreground) / 0.2)",
-          }}
-        />
-      ))}
-    </div>
-  );
+  return <Signal className={`h-5 w-5 transition-colors duration-500 ${color}`} />;
 };
 
 const stats = [
-  { label: "SERVER", usesPing: true },
-  { label: "WEBSITE", usesPing: true },
-  { icon: Signal, label: "DISCORD", color: "text-primary" },
+  { label: "SERVER", live: true },
+  { label: "WEBSITE", live: true },
+  { label: "DISCORD", live: true },
 ];
 
 const StatsBar = () => {
@@ -43,11 +31,7 @@ const StatsBar = () => {
         <div className="grid grid-cols-3 gap-px bg-border">
           {stats.map((stat) => (
             <div key={stat.label} className="flex flex-col items-center gap-1 bg-card py-5">
-              {stat.usesPing ? (
-                <PingIndicator />
-              ) : (
-                stat.icon && <stat.icon className={`h-5 w-5 ${stat.color || "text-muted-foreground"}`} />
-              )}
+              <LiveSignal />
               <span className="text-xs font-medium tracking-wider text-muted-foreground">{stat.label}</span>
             </div>
           ))}
