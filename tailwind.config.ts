@@ -15,7 +15,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Rajdhani", "system-ui", "sans-serif"],
+        display: ["Pixelify Sans", "Rajdhani", "system-ui", "sans-serif"],
+        pixel: ["Pixelify Sans", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
