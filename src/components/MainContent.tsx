@@ -1,10 +1,19 @@
 import { useState } from "react";
-import { Gamepad2, ShoppingBag, ScrollText, X } from "lucide-react";
+import { ShoppingBag, ScrollText, Users, X } from "lucide-react";
 import kweebecGif from "@/assets/kweebec.gif";
-import rulesCharacter from "@/assets/rules-character.png";
+import staffIwanderinglich from "@/assets/staff-iwanderinglich.png";
+import staffTinidor from "@/assets/staff-tinidor.png";
+import staffYuki from "@/assets/staff-yuki.png";
 
 const MainContent = () => {
   const [showRules, setShowRules] = useState(false);
+  const [showStaff, setShowStaff] = useState(false);
+
+  const staffMembers = [
+    { name: "tinidor", role: "owner", image: staffTinidor },
+    { name: "iWanderingLich", role: "staff", image: staffIwanderinglich },
+    { name: "yuki", role: "developer", image: staffYuki },
+  ];
 
   return (
     <div className="space-y-4">
@@ -22,9 +31,8 @@ const MainContent = () => {
             </p>
             <div className="flex items-center gap-3 mb-8">
               <button
-                onClick={() => setShowRules(!showRules)}
+                onClick={() => { setShowRules(!showRules); setShowStaff(false); }}
                 className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors green-glow">
-
                 <ScrollText className="h-4 w-4" />
                 Community Rules
               </button>
@@ -32,6 +40,12 @@ const MainContent = () => {
                 <ShoppingBag className="h-4 w-4" />
                 Store
               </a>
+              <button
+                onClick={() => { setShowStaff(!showStaff); setShowRules(false); }}
+                className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-5 py-2.5 text-sm font-semibold text-foreground hover:bg-muted transition-colors">
+                <Users className="h-4 w-4" />
+                Staff Team
+              </button>
             </div>
           </div>
           
@@ -46,7 +60,6 @@ const MainContent = () => {
           <button
           onClick={() => setShowRules(false)}
           className="absolute top-4 right-4 rounded-sm text-muted-foreground hover:text-foreground transition-colors">
-
             <X className="h-5 w-5" />
           </button>
           <div className="flex items-start gap-6">
@@ -62,6 +75,26 @@ const MainContent = () => {
             <div className="flex-shrink-0 hidden sm:block">
               <img alt="Rules character" className="w-40 h-40 object-contain" src="/lovable-uploads/16e71af9-9ceb-41e9-a87d-bd7bce25c81c.png" />
             </div>
+          </div>
+        </div>
+      }
+
+      {showStaff &&
+        <div className="rounded-xl border border-border bg-card p-6 relative">
+          <button
+            onClick={() => setShowStaff(false)}
+            className="absolute top-4 right-4 rounded-sm text-muted-foreground hover:text-foreground transition-colors">
+            <X className="h-5 w-5" />
+          </button>
+          <h3 className="font-display text-2xl font-bold text-foreground mb-6">STAFF TEAM</h3>
+          <div className="grid grid-cols-3 gap-6">
+            {staffMembers.map((member) => (
+              <div key={member.name} className="flex flex-col items-center text-center">
+                <img src={member.image} alt={member.name} className="w-32 h-32 object-contain mb-3 drop-shadow-[0_0_10px_hsl(var(--primary)/0.3)]" />
+                <span className="font-display text-lg font-bold text-foreground">{member.name}</span>
+                <span className="text-xs font-semibold uppercase tracking-wider text-primary">{member.role}</span>
+              </div>
+            ))}
           </div>
         </div>
       }
