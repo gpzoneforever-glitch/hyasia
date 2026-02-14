@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Copy, Check } from "lucide-react";
+import { useParallax } from "@/hooks/use-parallax";
 import heroBg from "@/assets/hero-bg.gif";
 import logo from "@/assets/hyasia.png";
 
@@ -11,6 +12,7 @@ const DiscordIcon = () =>
 
 const HeroSection = () => {
   const [copied, setCopied] = useState(false);
+  const scrollY = useParallax();
 
   const handleCopy = () => {
     navigator.clipboard.writeText("PLAY.HYASIA.NET");
@@ -23,13 +25,14 @@ const HeroSection = () => {
       <img
         src={heroBg}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover" />
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ transform: `translateY(${scrollY * 0.4}px)` }} />
 
       <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/40 to-background" />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
       <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-background/40" />
 
-      <div className="relative z-10 flex flex-col items-center text-center px-4">
+      <div className="relative z-10 flex flex-col items-center text-center px-4" style={{ transform: `translateY(${scrollY * 0.15}px)` }}>
         <img alt="HyAsia Logo" className="w-[28rem] h-auto drop-shadow-2xl mb-6" src="/lovable-uploads/c8e3b353-a6a1-4689-83d2-abbb29a18db9.png" />
 
         <h1 className="font-display text-6xl font-bold tracking-tight text-foreground text-glow mb-4">

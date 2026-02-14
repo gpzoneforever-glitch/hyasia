@@ -54,6 +54,12 @@
 @layer base {
   * {
     @apply border-border;
+    cursor: url('/cursors/sword.svg') 3 29, auto;
+  }
+
+  a, button, [role="button"], input[type="submit"], select, summary,
+  .cursor-pointer {
+    cursor: url('/cursors/sword-pointer.svg') 3 29, pointer;
   }
 
   body {
