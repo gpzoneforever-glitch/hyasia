@@ -19,27 +19,27 @@ const LiveSignal = () => {
 };
 
 const stats = [
-  { label: "SERVER", live: true },
-  { label: "WEBSITE", live: true },
-  { label: "DISCORD", live: true },
-];
+{ label: "SERVER", live: true },
+{ label: "WEBSITE", live: true },
+{ label: "DISCORD", live: true }];
+
 
 const StatsBar = () => {
   return (
     <div className="container mx-auto px-4 -mt-6 relative z-20">
       <div className="rounded-xl overflow-hidden border border-border">
         <div className="grid grid-cols-3 gap-px bg-border">
-          {stats.map((stat) => (
-            <div key={stat.label} className="flex flex-col items-center gap-1 bg-card py-5">
-              <LiveSignal />
-              <span className="text-xs font-medium tracking-wider text-muted-foreground">{stat.label}</span>
-            </div>
-          ))}
+          {stats.map((stat) => {}
+
+
+
+
+          )}
         </div>
         <img alt="Banner" className="w-full h-auto block" src="/lovable-uploads/ca3a35e1-170b-4e41-981f-51e4d5dd3e5e.png" />
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 export default StatsBar;
