@@ -28,10 +28,10 @@ const MainContent = () => {
                 <ScrollText className="h-4 w-4" />
                 Community Rules
               </button>
-              <button className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-5 py-2.5 text-sm font-semibold text-foreground hover:bg-muted transition-colors">
+              <a href="https://store.hyasia.net/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-5 py-2.5 text-sm font-semibold text-foreground hover:bg-muted transition-colors">
                 <ShoppingBag className="h-4 w-4" />
-                Mağaza
-              </button>
+                Store
+              </a>
             </div>
           </div>
           
