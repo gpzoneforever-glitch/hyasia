@@ -54,10 +54,16 @@
 @layer base {
   * {
     @apply border-border;
+    cursor: url('https://cur.cursors-4u.net/games/gam-4/gam372.png') 0 0, auto;
   }
 
   body {
     @apply bg-background text-foreground font-sans;
+    cursor: url('https://cur.cursors-4u.net/games/gam-4/gam372.png') 0 0, auto;
+  }
+
+  a, button, [role="button"], input[type="submit"], input[type="button"], label[for], select, .cursor-pointer {
+    cursor: url('https://cur.cursors-4u.net/games/gam-4/gam372.png') 0 0, pointer;
   }
 }
 
