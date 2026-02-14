@@ -3,7 +3,7 @@ import banner from "@/assets/banner.gif";
 
 const stats = [
 { icon: Users, value: "-", label: "SERVER" },
-{ icon: MessageCircle, value: "966", label: "DISCORD" },
+{ icon: MessageCircle, value: "966", label: "WEBSITE" },
 { icon: Signal, value: "✓", label: "SERVER STATUS", color: "text-primary" }];
 
 
