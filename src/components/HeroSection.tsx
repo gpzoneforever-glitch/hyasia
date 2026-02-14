@@ -33,7 +33,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-background/40" />
 
       <div className="relative z-10 flex flex-col items-center text-center px-4" style={{ transform: `translateY(${scrollY * 0.15}px)` }}>
-        <img alt="HyAsia Logo" className="w-[28rem] h-auto drop-shadow-2xl mb-6" src="/lovable-uploads/c8e3b353-a6a1-4689-83d2-abbb29a18db9.png" />
+        <img alt="HyAsia Logo" className="w-[36rem] h-auto drop-shadow-2xl mb-6" src="/lovable-uploads/c8e3b353-a6a1-4689-83d2-abbb29a18db9.png" />
 
         
 
