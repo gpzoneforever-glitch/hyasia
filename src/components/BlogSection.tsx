@@ -28,7 +28,7 @@ const BlogSection = () => {
           key={i}
           src={src}
           alt=""
-          className={`w-full rounded-lg object-cover ${i === 0 ? "col-span-2 h-56" : "h-40"}`} />
+          className={`w-full rounded-lg object-cover transition-all duration-500 grayscale hover:grayscale-0 hover:scale-105 hover:shadow-[0_0_20px_hsl(142_70%_45%/0.3)] ${i === 0 ? "col-span-2 h-56" : "h-40"}`} />
 
         )}
       </div>
