@@ -32,17 +32,21 @@ const MainContent = () => {
             <div className="flex items-center gap-3 mb-8">
               <button
                 onClick={() => { setShowRules(!showRules); setShowStaff(false); }}
-                className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90 transition-colors green-glow">
+                className="flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-all duration-200 hover:bg-primary/90 hover:shadow-[0_8px_24px_hsl(142_70%_45%/0.3)] hover:-translate-y-1 hover:scale-105 active:translate-y-0 active:scale-95 green-glow"
+                style={{ perspective: "600px" }}>
                 <ScrollText className="h-4 w-4" />
                 Community Rules
               </button>
-              <a href="https://store.hyasia.net/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-5 py-2.5 text-sm font-semibold text-foreground hover:bg-muted transition-colors">
+              <a href="https://store.hyasia.net/" target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-5 py-2.5 text-sm font-semibold text-foreground transition-all duration-200 hover:bg-muted hover:shadow-[0_8px_24px_hsl(0_0%_0%/0.4)] hover:-translate-y-1 hover:scale-105 active:translate-y-0 active:scale-95"
+                style={{ perspective: "600px" }}>
                 <ShoppingBag className="h-4 w-4" />
                 Store
               </a>
               <button
                 onClick={() => { setShowStaff(!showStaff); setShowRules(false); }}
-                className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-5 py-2.5 text-sm font-semibold text-foreground hover:bg-muted transition-colors">
+                className="flex items-center gap-2 rounded-lg border border-border bg-secondary px-5 py-2.5 text-sm font-semibold text-foreground transition-all duration-200 hover:bg-muted hover:shadow-[0_8px_24px_hsl(0_0%_0%/0.4)] hover:-translate-y-1 hover:scale-105 active:translate-y-0 active:scale-95"
+                style={{ perspective: "600px" }}>
                 <Users className="h-4 w-4" />
                 Staff Team
               </button>
